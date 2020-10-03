@@ -25,7 +25,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
 }
 
-/* Props */
+/* Home section */
 #home {
     margin-top: 30px;
 }
@@ -44,7 +44,7 @@ body {
     padding-top: 50px;
     padding-left: 50px;
 }
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     #home-img {
       grid-column: span 12;
       text-align: center;
@@ -55,9 +55,18 @@ body {
         border-radius: 75px;
     }
     #home-about {
-      grid-column: span 12;
-      padding-top: 20px;
-      text-align: center;
+    	grid-column: span 12;
+        padding-top: 20px;
+        padding-left: 0px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 40px;
+    	font-weight: normal;
+    }
+    h2 {
+        font-size: 20px;
+        font-weight: normal;
     }
 }
 h1 {
@@ -72,11 +81,6 @@ h2 {
     padding: 0;
     margin: 0;
 }
-/*@media (max-width: 992px) {
-    h2 {
-        max-width: 300px;
-    }
-}*/
 #home-icon {
     text-align: center;
 }
@@ -110,8 +114,7 @@ hr {
 }
 
 
-/**
-**/
+/* Resume section */
 #resume {
 	margin-top: 30px;
 }
@@ -177,223 +180,44 @@ hr {
 #resume .timeline-content h4 {
 	position: relative;
 }
-
-@media only screen and (max-width:1024px) {
-	#resume .timeline-header {
-		padding-right: 50px;
-	}
-	#resume .timeline-header h3 {
-		font-size: 1.8rem;
-	}
-	#resume .timeline-header p {
-		font-size: 1.4rem;
-	}
-	#resume .timeline-content {
-		padding-left: 50px;
-	}
-}
 @media only screen and (max-width:768px) {
+    #resume-img {
+        grid-column: span 12;
+    }
+    #resume-intro {
+        grid-column: span 12;
+    }
 	#resume .timeline-wrap::before {
-		left: 2.4rem;
+		left: 1.8rem;
 	}
 	#resume .timeline-ico {
-		left: 2.4rem;
+		height: 1.8rem;
+		width: 1.8rem;
+		line-height: 1.8rem;
+		left: 1.8rem;
+		margin-left: -0.8rem;
+		font-size: 1rem;
 	}
 	#resume .timeline-header {
 		float: none;
 		width: auto;
 		padding-right: 15px;
-		text-align: left;
+        text-align: left;
+        padding-left: 4rem;
 	}
 	#resume .timeline-header h3 {
-		font-size: 2rem;
+		font-size: 1.2rem;
 	}
 	#resume .timeline-header p {
-		font-size: 1.5rem;
-		margin-bottom: 1.5rem;
+		font-size: 1rem;
 	}
 	#resume .timeline-content {
-		margin: 0;
+        margin: 0;
+        font-size: 0.8rem;
+        padding-left: 4rem;
 	}
 	#resume .timeline-content h4 {
 		padding-bottom: 0;
-		padding-top: 2.1rem;
-		margin-bottom: .6rem;
-		font-size: 1.7rem;
-	}
-	#resume .timeline-header, #resume .timeline-content {
-		padding-left: 7rem;
+		font-size: 1rem;
 	}
 }
-@media only screen and (max-width:480px) {
-	#resume .resume-header h2 {
-		font-size: 2.2rem;
-	}
-	#resume .timeline-wrap::before {
-		left: 1.8rem;
-	}
-	#resume .timeline-ico {
-		height: 3.6rem;
-		width: 3.6rem;
-		line-height: 3.6rem;
-		left: 1.8rem;
-		margin-left: -1.8rem;
-		font-size: 1.5rem;
-	}
-	#resume .timeline-header, #resume .timeline-content {
-		padding-left: 5.5rem;
-	}
-}
-
-
-/*
-.ico {
-    grid-column: span 1;
-    vertical-align: top;
-    border-left: 2px solid #cfcfcf;
-    position: relative;
-}
-.ico img {
-    border-radius: 5px;
-    width: 100%;
-    max-width: 80px;
-    margin-left: 10px;
-}
-.desc {
-    grid-column: span 10;
-    vertical-align: top;
-    font-size: 17px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-}
-.entry {
-}
-.entry-dot {
-    position: absolute;
-    top: 0px;
-    left: -8px;
-    width: 10px;
-    height: 10px;
-    border-radius: 7px;
-    background-color: #cfcfcf;
-    border: 2px solid white;
-}
-.timespan {
-    grid-column: span 1;
-    font-size: 14px;
-    text-align: right;
-    padding-right: 5px;
-    color: #bbb;
-}
-.hassets {
-    position: relative;
-}
-@media (max-width: 991px) {
-    .hassets {
-        display: none;
-    }
-}
-.hasset {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-}
-.ctitle {
-    font-size: 36px;
-    margin-bottom: 20px;
-    margin-top: 40px;
-}
-#featured-talks .row {
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    padding-bottom: 30px;
-}
-.card {
-    grid-column: span 3;
-    vertical-align: top;
-    background-color: #eee;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    padding: 5px;
-    background-color: white;
-    padding-bottom: 10px;
-}
-@media (max-width: 991px) {
-    .card {
-        grid-column: span 6;
-    }
-    #featured-talks .row {
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-    }
-}
-.card img {
-    border-radius: 5px;
-    width: 100%;
-}
-.cdesc {
-    height: 30px;
-    vertical-align: top;
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-@media (max-width: 768px) {
-    .cdesc {
-        font-size: 14px;
-        padding-bottom: 10px;
-    }
-}
-#pet-projects .row {
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-}
-.project {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-}
-.pico {
-    float: left;
-    margin-right: 10px;
-}
-.pdesc {
-}
-.pend {
-    clear: both;
-}
-.pico img {
-    height: 80px;
-    border-radius: 5px;
-    border: 1px solid #999;
-}
-.pub {
-    font-size: 14px;
-    border-left: 4px solid #aaa;
-    padding: 2px 0px 2px 10px;
-    margin-bottom: 10px;
-}
-.pub-title {
-    display: inline;
-    color: #333;
-}
-.pub-venue {
-    display: inline;
-    color: #090;
-}
-.pub-authors {
-    display: block;
-    color: #900;
-}
-.tul {
-    text-align: center;
-    padding: 0;
-}
-.til {
-    display: inline-block;
-    padding: 3px 15px 3px 15px;
-    margin-bottom: 5px;
-}
-.tilb {
-    border-right: 1px solid #ccc;
-}
-*/
